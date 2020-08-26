@@ -1,0 +1,8 @@
+prefix=/home/javad/new_ws/install
+
+Name: ur5
+Description: Description of ur5
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

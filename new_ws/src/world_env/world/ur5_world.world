@@ -1,0 +1,365 @@
+<?xml version="1.0" ?>
+ 
+<sdf version="1.5">
+	<world name="default">
+		<!-- A global light source -->
+		<include>
+			<uri>model://sun</uri>
+		</include>
+ 
+		<!-- A ground plane -->
+		<include>
+			<uri>model://ground_plane</uri>
+		</include>
+
+		<!-- kinect -->
+		<include>
+			<uri>model://kinect_ros</uri>
+			<static>true</static>
+			<pose>0 -0.6 2.5 0 1.57 -1.57</pose>
+		</include>
+
+				<!-- Table 1 (pick from) -->
+		<include>
+			<uri>model://table</uri>
+			<static>true</static>
+			<name>table1</name>
+			<pose>0 -0.6 0 0 0 0</pose>
+		</include>
+
+		<!-- Table 2 (place to) -->
+		<include>
+			<uri>model://table</uri>
+			<static>true</static>
+			<name>table2</name>
+			<pose>0 0.6 0 0 0 0</pose>
+		</include>
+
+
+		<!-- Testing the automatic population of objects -->
+		<!--red cube-->
+		<population name="pop_block_r1">
+		<model name="block_r1">
+			<include>
+			<static>false</static>
+			<uri>model://my1stmodel</uri>
+			</include>
+		</model>
+		<pose>0.45 -0.55 1.05 0 0 0</pose>
+		<box>
+			<size>0.05 0.05 0.0001</size>
+		</box>
+		<model_count>1</model_count>
+		<distribution>
+			<type>random</type>
+		</distribution>
+		</population>
+
+		<!--red cube 2nd pop-->
+		<population name="pop_block_r2">
+		<model name="block_r2">
+			<include>
+			<static>false</static>
+			<uri>model://my1stmodel</uri>
+			</include>
+		</model>
+		<pose>-0.4 -0.35 1.05 0 0 0</pose>
+		<box>
+			<size>0.05 0.05 0.0001</size>
+		</box>
+		<model_count>1</model_count>
+		<distribution>
+			<type>random</type>
+		</distribution>
+		</population>
+		
+		<!--green cube-->
+		<population name="pop_block_g1">
+		<model name="block_g1">
+			<include>
+			<static>false</static>
+			<uri>model://my4thmodel</uri>
+			</include>
+		</model>
+		<pose>0.3 -0.8 1.05 0 0 0</pose>
+		<box>
+			<size>0.1 0.1 0.0001</size>
+		</box>
+		<model_count>1</model_count>
+		<distribution>
+			<type>random</type>
+		</distribution>
+		</population> 
+
+		<!--green cube 2nd-->
+		<population name="pop_block_g2">
+		<model name="block_g2">
+			<include>
+			<static>false</static>
+			<uri>model://my4thmodel</uri>
+			</include>
+		</model>
+		<pose>-0.2 -0.55 1.05 0 0 0</pose>
+		<box>
+			<size>0.05 0.05 0.0001</size>
+		</box>
+		<model_count>1</model_count>
+		<distribution>
+			<type>random</type>
+		</distribution>
+		</population> 
+
+		<!--blue cube-->
+		<population name="pop_block_b1">
+		<model name="block_b1">
+			<include>
+			<static>false</static>
+			<uri>model://my5thmodel</uri>
+			</include>
+		</model>
+		<pose>-0.35 -0.65 1.05 0 0 0</pose>
+		<box>
+			<size>0.05 0.05 0.0001</size>
+		</box>
+		<model_count>1</model_count>
+		<distribution>
+			<type>random</type>
+		</distribution>
+		</population>
+
+		<!--blue rectangle-->
+		<population name="pop_rect_b1">
+		<model name="rectangle_b1">
+			<include>
+			<static>false</static>
+			<uri>model://my2ndmodel</uri>
+			</include>
+		</model>
+		<pose>-0.15 -0.35 1.05 0 0 0</pose>
+		<box>
+			<size>0.05 0.05 0.0001</size>
+		</box>
+		<model_count>1</model_count>
+		<distribution>
+			<type>random</type>
+		</distribution>
+		</population>
+
+		<!--green rectangle-->
+		<population name="pop_rect_g1">
+		<model name="rectangle_g1">
+			<include>
+			<static>false</static>
+			<uri>model://my6thmodel</uri>
+			</include>
+		</model>
+		<pose>-0.2 -0.75 1.05 0 0 0</pose>
+		<box>
+			<size>0.05 0.05 0.0001</size>
+		</box>
+		<model_count>1</model_count>
+		<distribution>
+			<type>random</type>
+		</distribution>
+		</population> 
+
+		<!--green rectangle 2nd-->
+		<population name="pop_rect_g2">
+		<model name="rectangle_g2">
+			<include>
+			<static>false</static>
+			<uri>model://my6thmodel</uri>
+			</include>
+		</model>
+		<pose>0.1 -0.68 1.05 0 0 0</pose>
+		<box>
+			<size>0.05 0.05 0.0001</size>
+		</box>
+		<model_count>1</model_count>
+		<distribution>
+			<type>random</type>
+		</distribution>
+		</population> 
+
+		<!--red rectangle-->
+		<population name="pop_rect_r1">
+		<model name="rectangle_r1">
+			<include>
+			<static>false</static>
+			<uri>model://my7thmodel</uri>
+			</include>
+		</model>
+		<pose>0.1 -0.4 1.05 0 0 0</pose>
+		<box>
+			<size>0.05 0.05 0.0001</size>
+		</box>
+		<model_count>1</model_count>
+		<distribution>
+			<type>random</type>
+		</distribution>
+		</population> 
+
+		<!--green hexagon-->
+		 <population name="pop_hex_g1">
+		<model name="hexagon_g1">
+			<include>
+			<static>false</static>
+			<uri>model://my3rdmodel</uri>
+			</include>
+		</model>
+		<pose>-0.05 -0.55 1.05 0 0 0</pose>
+		<box>
+			<size>0.05 0.05 0.0001</size>
+		</box>
+		<model_count>1</model_count>
+		<distribution>
+			<type>random</type>
+		</distribution>
+		</population> 
+
+		<!--red hexagon-->
+		<population name="pop_hex_r1">
+		<model name="hexagon_r2">
+			<include>
+			<static>false</static>
+			<uri>model://my8thmodel</uri>
+			</include>
+		</model>
+		<pose>0.25 -0.6 1.05 0 0 0</pose>
+		<box>
+			<size>0.05 0.05 0.0001</size>
+		</box>
+		<model_count>1</model_count>
+		<distribution>
+			<type>random</type>
+		</distribution>
+		</population> 
+
+		<!--blue hexagon-->
+		<population name="pop_hex_b1">
+		<model name="hexagon_b1">
+			<include>
+			<static>false</static>
+			<uri>model://my9thmodel</uri>
+			</include>
+		</model>
+		<pose>0.35 -0.4 1.05 0 0 0</pose>
+		<box>
+			<size>0.05 0.05 0.0001</size>
+		</box>
+		<model_count>1</model_count>
+		<distribution>
+			<type>random</type>
+		</distribution>
+		</population> 
+
+		<!--blue hexagon-->
+		<population name="pop_hex_b2">
+		<model name="hexagon_b2">
+			<include>
+			<static>false</static>
+			<uri>model://my9thmodel</uri>
+			</include>
+		</model>
+		<pose>-0.4 -0.5 1.05 0 0 0</pose>
+		<box>
+			<size>0.05 0.05 0.0001</size>
+		</box>
+		<model_count>1</model_count>
+		<distribution>
+			<type>random</type>
+		</distribution>
+		</population> 
+
+		<!--miscell shapes-->
+		<!--blue hexagon 2-->
+		<population name="pop_hex_b3">
+		<model name="hexagon_b3">
+			<include>
+			<static>false</static>
+			<uri>model://my9thmodel</uri>
+			</include>
+		</model>
+		<pose>0.0 -0.8 1.05 0 0 0</pose>
+		<box>
+			<size>0.05 0.05 0.0001</size>
+		</box>
+		<model_count>1</model_count>
+		<distribution>
+			<type>random</type>
+		</distribution>
+		</population> 
+
+		<!--red cube 3rd pop-->
+		<population name="pop_block_r3">
+		<model name="block_r3">
+			<include>
+			<static>false</static>
+			<uri>model://my1stmodel</uri>
+			</include>
+		</model>
+		<pose>-0.55 -0.8 1.05 0 0 0</pose>
+		<box>
+			<size>0.05 0.05 0.0001</size>
+		</box>
+		<model_count>1</model_count>
+		<distribution>
+			<type>random</type>
+		</distribution>
+		</population>
+
+		<!--green hexagon-->
+		 <population name="pop_hex_g2">
+		<model name="hexagon_g2">
+			<include>
+			<static>false</static>
+			<uri>model://my3rdmodel</uri>
+			</include>
+		</model>
+		<pose>-0.6 -0.6 1.05 0 0 0</pose>
+		<box>
+			<size>0.05 0.05 0.0001</size>
+		</box>
+		<model_count>1</model_count>
+		<distribution>
+			<type>random</type>
+		</distribution>
+		</population> 
+
+		<!--green rectangle-->
+		<population name="pop_rect_g3">
+		<model name="rectangle_g3">
+			<include>
+			<static>false</static>
+			<uri>model://my6thmodel</uri>
+			</include>
+		</model>
+		<pose>-0.6 -0.35 1.05 0 0 0</pose>
+		<box>
+			<size>0.05 0.05 0.0001</size>
+		</box>
+		<model_count>1</model_count>
+		<distribution>
+			<type>random</type>
+		</distribution>
+		</population> 
+
+		<!--red rectangle-->
+		<population name="pop_rect_r2">
+		<model name="rectangle_r2">
+			<include>
+			<static>false</static>
+			<uri>model://my7thmodel</uri>
+			</include>
+		</model>
+		<pose>0.6 -0.75 1.05 0 0 0</pose>
+		<box>
+			<size>0.05 0.05 0.0001</size>
+		</box>
+		<model_count>1</model_count>
+		<distribution>
+			<type>random</type>
+		</distribution>
+		</population> 
+	</world>
+</sdf>

@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+
+<sdf version="1.5">
+	<world name="default">
+		<!-- A global light source -->
+		<include>
+			<uri>model://sun</uri>
+		</include>
+
+		<!-- A ground plane -->
+		<include>
+			<uri>model://ground_plane</uri>
+		</include>
+
+                <!-- A post box plane -->
+		<include>
+			<uri>model://postbox</uri>
+		</include> 
+
+                <!-- Our custom model 1 -->
+		<include>
+			<uri>model://my1stmodel</uri>
+                        <pose>2 2 0 0 0 0</pose>
+		</include>    
+
+                <!-- Our custom model 2 -->
+		<include>
+			<uri>model://my2ndmodel</uri>
+                        <pose>2 3 0 0 0 0</pose>
+		</include>       
+
+                <!-- Our custom model 3 -->
+		<include>
+			<uri>model://my3rdmodel</uri>
+                        <pose>2 4 0 0 0 0</pose>
+		</include>               
+        
+
+	</world>
+</sdf>

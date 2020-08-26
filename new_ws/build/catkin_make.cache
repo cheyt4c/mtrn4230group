@@ -1,0 +1,2 @@
+ur5/ur_description:ur5/ur_gazebo:world_env
+-DCATKIN_DEVEL_PREFIX=/home/javad/new_ws/devel -DCMAKE_INSTALL_PREFIX=/home/javad/new_ws/install -G Unix Makefiles
